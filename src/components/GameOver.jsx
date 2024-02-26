@@ -14,9 +14,9 @@ const GameOver = () => {
     <div id="gameover">
         <h2>End Game</h2>
         <p>Pontuação: {quizState.score}</p>
-        <p>Você acertou {quizState.score} de {quizState.questions.length}{""} perguntas</p>
+        <p>Você acertou {quizState.score} de {quizState.questions.length}{" "}</p>
         <img src={WellDone} alt="EndGame" />
-        <button>Reiniciar</button>
+        <button onClick={() => dispatch({type: "NEW_GAME"})}>Reiniciar</button>
     </div>
   )
 }
